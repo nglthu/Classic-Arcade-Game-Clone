@@ -1,3 +1,11 @@
+
+var enemyX1=Math.random(); var enemyY1=Math.random()+80;
+var enemyX2=Math.random()*10; var enemyY2=enemyY1+100;
+var enemyX3=Math.random()*20; var enemyY3=enemyY1+110;
+var enemyX4=Math.random()*30; var enemyY4=enemyY1+130;
+var enemyX5=Math.random()*40; var enemyY5=enemyY1+120;
+var enemyX6=Math.random()*50; var enemyY6=enemyY1+140;
+
 // Enemies our player must avoid
 var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
@@ -90,12 +98,27 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-var enemy1 = new Enemy(-90, 60);
-var enemy2 = new Enemy(-190, 140);
-var enemy3 = new Enemy(-290, 230);
-var enemy4 = new Enemy(-390, 140);
-var enemy5 = new Enemy(-490, 60);
-var enemy6 = new Enemy(-890, 230);
+/*var enemyX1=-90; var enemyY1=60;
+var enemyX2=-190; var enemyY2=140;
+var enemyX3=-290; var enemyY3=230;
+var enemyX4=-390; var enemyY4=140;
+var enemyX5=-490; var enemyY5=60;
+var enemyX6=-590;var enemyY6=230;*/
+
+
+
+var enemy1 = new Enemy(enemyX1, enemyY1);
+var enemy2 = new Enemy(enemyX2, enemyY2);
+var enemy3 = new Enemy(enemyX3, enemyY3);
+var enemy4 = new Enemy(enemyX4, enemyY4);
+var enemy5 = new Enemy(enemyX5, enemyY5);
+var enemy6 = new Enemy(enemyX6, enemyY6);
+
+
+
+
+
+
 var allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6];
 
 
