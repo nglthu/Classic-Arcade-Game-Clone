@@ -1,10 +1,13 @@
 #How to code
-##Create class of 'Player'
-###Create method for 'Player'
+##Fractor code: 
+*Create class of 'Person'
+Both Enemy and Player are Person, they have same method of 'render'
+Create super class 'Person'
+*Declare global variables at the top
+###Create its own method for 'Player' and 'Enemy'
 '''
 1. update
-2. render
-3. handleInput
+2. handleInput
 '''
 ##Create allEnemies as array of object of class Enemy
 all enemy objects in an array called 'allEnemies'

@@ -6,6 +6,11 @@ var enemyX4=Math.random()-300; 	  var enemyY4=enemyY1+130;
 var enemyX5=Math.random()-400; var enemyY5=enemyY1+50;
 var enemyX6=Math.random()-500; var enemyY6=enemyY1+70;
 
+var enemyImage = 'images/enemy-bug.png';
+var enemySpeed = Math.random()*400+10;
+
+
+
 var Person = function(image, x, y, speed){
 	this.image = image;
 	this.x = x;
@@ -18,8 +23,7 @@ Person.prototype.render = function(){
 	
 };
 
-var enemyImage = 'images/enemy-bug.png';
-var enemySpeed = Math.random()*400+10;
+
 // Enemies our player must avoid
 var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
@@ -47,25 +51,23 @@ Enemy.prototype.update = function(dt) {
 	//this.y = this.y + this.speed * dt;
 };
 
-
+var playerX = Math.random()*200+38;
+var playerY = Math.random()*200+38;
+var playerImage = 'images/char-boy.png';
 
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function(){
-	 this.sprite = 'images/char-boy.png';
-	 this.x = Math.random()*200+38;
-	 this.y = Math.random()*200+38;
-	//location.reload();
+	 Person.call(this, playerImage, playerX, playerY, 0);
+	
 };
+Player.prototype = Object.create(Person.prototype);
+
 Player.prototype.update = function(){
 	
 };
-Player.prototype.render = function(){
-	
-	ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-	
-};
+
 Player.prototype.handleInput = function(direction){
 	 if(direction == 'left' && this.x > 0) {
         this.x -= 50;
