@@ -1,12 +1,13 @@
 #How to code
-##Create class of Player
-###Create method for Player
+##Create class of 'Player'
+###Create method for 'Player'
+'''
 1. update
 2. render
 3. handleInput
-
+'''
 ##Create allEnemies as array of object of class Enemy
-
+all enemy objects in an array called 'allEnemies'
 
 
 frontend-nanodegree-arcade-game
