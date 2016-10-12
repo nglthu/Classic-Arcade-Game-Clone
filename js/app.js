@@ -1,11 +1,25 @@
 
 var enemyX1=Math.random(); var enemyY1=Math.random()+80;
-var enemyX2=Math.random()*10; var enemyY2=enemyY1+100;
-var enemyX3=Math.random()*20; var enemyY3=enemyY1+110;
-var enemyX4=Math.random()*30; var enemyY4=enemyY1+130;
-var enemyX5=Math.random()*40; var enemyY5=enemyY1+120;
-var enemyX6=Math.random()*50; var enemyY6=enemyY1+140;
+var enemyX2=Math.random()-100; var enemyY2=enemyY1+100;
+var enemyX3=Math.random()-200; var enemyY3=enemyY1+90;
+var enemyX4=Math.random()-300; 	  var enemyY4=enemyY1+130;
+var enemyX5=Math.random()-400; var enemyY5=enemyY1+50;
+var enemyX6=Math.random()-500; var enemyY6=enemyY1+70;
 
+var Person = function(image, x, y, speed){
+	this.image = image;
+	this.x = x;
+	this.y = y;
+	this.speed = speed;
+	
+};
+Person.prototype.render = function(){
+	ctx.drawImage(Resources.get(this.image), this.x, this.y);
+	
+};
+
+var enemyImage = 'images/enemy-bug.png';
+var enemySpeed = Math.random()*400+10;
 // Enemies our player must avoid
 var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
@@ -13,14 +27,10 @@ var Enemy = function(x,y) {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
-	
-	 this.x = x;
-	 this.y = y;
-	
-	 this.speed=Math.random()*200+10;
+	Person.call(this, enemyImage, x, y, enemySpeed);
+    
 };
-
+Enemy.prototype = Object.create(Person.prototype);
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
@@ -37,10 +47,7 @@ Enemy.prototype.update = function(dt) {
 	//this.y = this.y + this.speed * dt;
 };
 
-// Draw the enemy on the screen, required method for game
-Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+
 
 // Now write your own player class
 // This class requires an update(), render() and
@@ -98,13 +105,6 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-/*var enemyX1=-90; var enemyY1=60;
-var enemyX2=-190; var enemyY2=140;
-var enemyX3=-290; var enemyY3=230;
-var enemyX4=-390; var enemyY4=140;
-var enemyX5=-490; var enemyY5=60;
-var enemyX6=-590;var enemyY6=230;*/
-
 
 
 var enemy1 = new Enemy(enemyX1, enemyY1);
@@ -113,9 +113,6 @@ var enemy3 = new Enemy(enemyX3, enemyY3);
 var enemy4 = new Enemy(enemyX4, enemyY4);
 var enemy5 = new Enemy(enemyX5, enemyY5);
 var enemy6 = new Enemy(enemyX6, enemyY6);
-
-
-
 
 
 
