@@ -6,7 +6,7 @@
 
 #How to Play the application
 
-1. Moving player (left, right, up or down) against any enemy.
+1. Moving player (left, right, up or down) by using arrow key on the keyboard against any enemy.
 
 2. If player have a collision with an enemy, the player will be back to a default position (at the bottom of game screen), and a point will be decreased.
 
