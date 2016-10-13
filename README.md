@@ -1,14 +1,20 @@
-#How to play
-1. Open link to play
-https://nglthu.github.io/Arcade_Game/
-2. 10 points is bonus
-3. When make collision with enemy, point will lose 1
-4. When come to Gem, energy will be dramatically increased, blood will be filled until staying there without any enemy.
+#How to Run the application
 
-#How to Run in local
-1. Download this source code
+1. Open link to https://nglthu.github.io/Arcade_Game/ to run online
 
-2. Open file index.html in a browser
+2. If you run on local, download this source code, then open index.html in a browser, and enjoy playing
+
+#How to Play the application
+
+1. Moving player (left, right, up or down) against any enemy.
+
+2. If player have a collision with an enemy, the player will be back to a default position (at the bottom of game screen), and a point will be decreased.
+
+3. If player reach the top of the game screen without any enemy's collision, the player will have a point. 
+
+4. Default 10-points are bonus at the beginning
+
+5. When player arrives to Gem at the top without any enemy's collision, energy will be dramatically increased, blood will be filled until staying there without any enemy.
 
 
 #How to code
