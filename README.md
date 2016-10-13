@@ -3,7 +3,7 @@
 https://nglthu.github.io/Arcade_Game/
 2. 10 points is bonus
 3. When make collision with enemy, point will lose 1
-4. When come to gem, energy will creased, blood will be filled until stay there.
+4. When come to Gem, energy will be increased, blood will be filled until stay there.
 
 
 #How to code
