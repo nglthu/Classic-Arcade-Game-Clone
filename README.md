@@ -10,6 +10,7 @@ https://nglthu.github.io/Arcade_Game/
 ##Building: 
 1.Create class of 'Contestant'
 Both Enemy and Player are Contestant, they have same method of 'render'
+
 2.Declare global variables at the top
 
 ###Create its own method for 'Player' and 'Enemy'
