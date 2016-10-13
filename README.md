@@ -3,22 +3,26 @@
 https://nglthu.github.io/Arcade_Game/
 2. 10 points is bonus
 3. When make collision with enemy, point will lose 1
-4. When come to Gem, energy will be increased, blood will be filled until stay there.
+4. When come to Gem, energy will be dramatically increased, blood will be filled until staying there without any enemy.
 
 
 #How to code
-##Fractor code: 
-*Create class of 'Person'
-Both Enemy and Player are Person, they have same method of 'render'
-Create super class 'Person'
-*Declare global variables at the top
+##Building: 
+1.Create class of 'Contestant'
+Both Enemy and Player are Contestant, they have same method of 'render'
+
+2. Declare global variables at the top
 ###Create its own method for 'Player' and 'Enemy'
 '''
 1. update
 2. handleInput
 '''
-##Create allEnemies as array of object of class Enemy
+3. Create a class of Gem and its method
++render : render two Images Gem and blood when player coming that position.  
+4. Create allEnemies as array of object of class Enemy
 all enemy objects in an array called 'allEnemies'
+All enimies have their own random positions and speeds running the screen. 
+##Modified index for score input
 
 
 frontend-nanodegree-arcade-game

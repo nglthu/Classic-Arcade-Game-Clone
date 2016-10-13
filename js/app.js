@@ -21,19 +21,18 @@ var playerPositionMaxX = 400;
 var playerPositionMaxY = 388;
 var playerPositionMinX = 0;
 var playerPositionMinY = 0.5;
-var playerX = Math.random() * 200 + 100;
-var playerY = Math.random() * 200 + 200;
+var playerX = 200;
+var playerY = 320;
 var playerImage = 'images/char-boy.png';
-
 var canvasWidthMin = -100;
 var score = 10;
 document.getElementById('score').value = score;
 var movement = 50;
-
 var gemImage = 'images/GemOrange.png';
-var gemX = Math.random()+300;
+var heart = 'images/Heart.png';
+var gemX = Math.random() + 300;
 var gemY = 50;
-
+var positionReachPointY = 20;
 
 var Person = function (image, x, y, speed) {
 	this.image = image;
@@ -68,10 +67,12 @@ Enemy.prototype.update = function (dt) {
 	}
 	//this.y = this.y + this.speed * dt;
 	if (this.x < player.x + 30 && this.x + 60 > player.x && this.y < player.y + 50 && this.y + 40 > player.y) {
-		if(score > 0){
+		if (score > 0) {
 			score--;
 		}
-		else {score = score;}
+		else {
+			score = score;
+		}
 		document.getElementById('score').value = score;
 		player.reset();
 	}
@@ -84,13 +85,13 @@ var Player = function () {
 };
 Player.prototype = Object.create(Person.prototype);
 Player.prototype.update = function () {
-	if (player.y < 20) {
+	if (player.y < positionReachPointY) {
 		score++;
 		document.getElementById('score').value = score;
 		this.reset();
 		console.log('score:' + score);
 	}
-	if((player.y<gemY+10) && (player.y = gemY) && (player.x > gemX-30)&& (player.x< gemX+30) ){
+	if ((player.y < gemY + 10) && (player.y = gemY) && (player.x > gemX - 30) && (player.x < gemX + 30)) {
 		score++;
 		document.getElementById('score').value = score;
 		//this.reset();
@@ -113,7 +114,7 @@ Player.prototype.handleInput = function (direction) {
 };
 Player.prototype.reset = function () {
 	this.x = 200;
-	this.y = 320;
+	this.y = 340;
 };
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -143,40 +144,18 @@ document.addEventListener('keyup', function (e) {
 	};
 	player.handleInput(allowedKeys[e.keyCode]);
 });
-
-var Gem = function () {
-var gemImage = 'images/GemOrange.png';
-var x = Math.random()+300;
-var y = 50;
+var Gem = function ( x,y) {
+	this.x = x;
+	this.y =y;
 };
-
-
-var gem = new Gem();
-Gem.prototype.render =function(){
-	var gemImage = 'images/GemOrange.png';
-	var heart = 'images/Heart.png';
-	var x = Math.random()+300;
-    var y = 50;
+var gem = new Gem(gemX,gemY);
+Gem.prototype.render = function () {
 	
-	if((player.y<60) && (player.y = 50) && (player.x >270)&& (player.x<330) ){
-		
-			ctx.drawImage(Resources.get(heart), x, y);
-		
+	if ((player.y < gem.y+10) && (player.y = gem.y) && (player.x > gem.x -30) && (player.x < gem.x+30)) {
+		ctx.drawImage(Resources.get(heart), this.x, this.y);
 		console.log("image not render:")
 	}
 	else {
-		
-		ctx.drawImage(Resources.get(gemImage), x, y);
+		ctx.drawImage(Resources.get(gemImage), this.x, this.y);
 	}
-	
-	
-};
-Gem.prototype.update = function (){
-	if((x = player.x) && (y=player.y))
-		{
-			score ++;
-			document.getElementById('score').value = score;
-			console.log("score gem:"+score +"x="+x+"y="+y+"playerx="+player.x+"playery="+player.y);
-			ctx.clearRect(this.x, this.y, this.x+101,this.y+171);
-		}
 };
