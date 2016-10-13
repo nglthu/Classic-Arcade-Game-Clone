@@ -4,6 +4,7 @@ https://nglthu.github.io/Arcade_Game/
 2. 10 points is bonus
 3. When make collision with enemy, point will lose 1
 4. When come to Gem, energy will be dramatically increased, blood will be filled until staying there without any enemy.
+
 #How to Run in local
 1. Download this source code
 
