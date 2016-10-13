@@ -12,20 +12,21 @@ https://nglthu.github.io/Arcade_Game/
 Both Enemy and Player are Contestant, they have same method of 'render'
 
 2. Declare global variables at the top
+
 ###Create its own method for 'Player' and 'Enemy'
-'''
+
 1. update
 2. handleInput
-'''
-3. Create a class of Gem and its method
-+render : render two Images Gem and blood when player coming that position.  
+3. Create a class of Gem and its method. 
+Render two Images Gem and blood when player coming that position.  
 4. Create allEnemies as array of object of class Enemy
-all enemy objects in an array called 'allEnemies'
-All enimies have their own random positions and speeds running the screen. 
+All enemy objects in an array called 'allEnemies'
+All enemies have their own random positions and speeds running the screen. 
+
 ##Modified index for score input
 
 
-frontend-nanodegree-arcade-game
+#frontend-nanodegree-arcade-game
 ===============================
 
 Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
