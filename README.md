@@ -1,3 +1,11 @@
+#How to play
+1. Open link to play
+https://nglthu.github.io/Arcade_Game/
+2. 10 points is bonus
+3. When make collision with enemy, point will lose 1
+4. When come to gem, energy will creased, blood will be filled until stay there.
+
+
 #How to code
 ##Fractor code: 
 *Create class of 'Person'
