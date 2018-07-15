@@ -16,9 +16,9 @@
 
 # Run the application
 
-1. Open [!link](https://nglthu.github.io/Classic-Arcade-Game-Clone/)  to run online
+1. Open [Link](https://nglthu.github.io/Classic-Arcade-Game-Clone/)  to run online
 
-<img src="/images/interface.jpg">
+<img src="/images/gif/play.gif">
 
 2. If you run on local, download this source code, then open index.html in a browser, and enjoy playing
 
