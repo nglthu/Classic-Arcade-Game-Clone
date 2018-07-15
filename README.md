@@ -1,3 +1,19 @@
+[![licence badge]][licence]
+[![stars badge]][stars]
+[![forks badge]][forks]
+[![issues badge]][issues]
+
+[licence badge]:https://img.shields.io/badge/license-MIT-blue.svg
+[stars badge]:https://img.shields.io/github/stars/hey-red/Markdown.svg
+[forks badge]:https://img.shields.io/github/forks/hey-red/Markdown.svg
+[issues badge]:https://img.shields.io/github/issues/hey-red/Markdown.svg
+
+[licence]:https://github.com/nglthu/Arcade_Game/blob/master/LICENSE.md
+[stars]:https://github.com/nglthu/Arcade_Game/stargazers
+[forks]:https://github.com/nglthu/Arcade_Game/network
+[issues]:https://github.com/nglthu/Arcade_Game/issues
+
+
 # Run the application
 
 1. Open [!link](https://nglthu.github.io/Classic-Arcade-Game-Clone/)  to run online
