@@ -13,6 +13,9 @@
 [forks]:https://github.com/nglthu/Arcade_Game/network
 [issues]:https://github.com/nglthu/Arcade_Game/issues
 
+# Introduction
+
+An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript. 
 
 # Run the application
 
